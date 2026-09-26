@@ -26,4 +26,4 @@ The datasets (`FinTrust_Customer_Data`, `FinTrust_Transaction_Data`) are **synth
 Excel · SQL · Python (Pandas) · Power BI
 
 ## Status
-🚧 In progress — Week 1 complete, Weeks 2–4 ongoing.
+🚧 In progress — Week 1 & 2 complete, Weeks 3–4 ongoing.
