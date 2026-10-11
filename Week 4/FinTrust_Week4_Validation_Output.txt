@@ -1,0 +1,36 @@
+V1 KPI reconciliation
+  customers 1500 | transactions 12000
+  total value 560477354.85 | avg 46706.45
+  success rate % 90.47 | risk rate % 19.6
+V2 International vs domestic risk
+         mean   sum  count
+intl                      
+False  0.1888  2175  11520
+True   0.3688   177    480
+  chi-square p = 3.96e-22
+V3 Segment vs risk, and spend per customer
+{'Everyday': 19.29, 'Premium': 20.33, 'SME': 19.4, 'Student': 19.75}
+  chi-square p = 0.751
+  spend per customer: {'Everyday': 367734.0, 'Premium': 365258.0, 'SME': 387923.0, 'Student': 386604.0}
+  Kruskal-Wallis p (spend by segment) = 0.463
+V4 Value vs risk
+{Interval(0.0, 10000.0, closed='right'): 17.7, Interval(10000.0, 50000.0, closed='right'): 17.8, Interval(50000.0, 100000.0, closed='right'): 18.9, Interval(100000.0, 250000.0, closed='right'): 25.5, Interval(250000.0, 693454.45, closed='right'): 40.9}
+  chi-square p = 1.61e-40
+  top1% flagged 35.83 | rest 19.44 | p = 1.15e-05
+V5 Failure/reversal by channel
+{'ATM': 6.87, 'Mobile App': 8.64, 'POS': 7.73, 'USSD': 8.66, 'Web': 7.12}
+  chi-square p (channel) = 0.070
+  USSD Cash Withdrawal: n=100, rate=10.0%, binomial p vs overall = 0.457
+  USSD Deposit: n=130, rate=10.0%, binomial p vs overall = 0.415
+V6 ATM + International
+  n=63, rate=46.0%, 95% CI 33.7% to 58.3%
+  channel vs risk within international, chi-square p = 0.273
+V7 Monthly trend per day
+         days  value_per_day_M  txn_per_day
+date                                       
+2026-01    31            6.080        133.3
+2026-02    28            6.278        133.4
+2026-03    31            6.329        133.3
+V8 Success rate by value range
+{Interval(0.0, 10000.0, closed='right'): 91.0, Interval(10000.0, 50000.0, closed='right'): 89.2, Interval(50000.0, 100000.0, closed='right'): 89.3, Interval(100000.0, 250000.0, closed='right'): 91.3, Interval(250000.0, 693454.45, closed='right'): 92.3}
+  chi-square p = 0.011
